@@ -10,7 +10,8 @@ const port = 3001;
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://deploy-mern-1whq.vercel.app"],
+        origin: ["https://todo-app-api-ten.vercel.app
+"],
         methods: ["POST", "GET"],
         credentials: true
     }
