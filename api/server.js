@@ -8,7 +8,13 @@ require('dotenv').config()
 
 const port = 3001;
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 const connectionString = process.env.MONGO_URI
 
